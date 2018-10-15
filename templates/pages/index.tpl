@@ -3,6 +3,8 @@
 
 {block name=body}
 
+    <h1><i class="fas fa-rocket"></i></h1>
+
 {/block}
 
 {block name=js}{/block}
