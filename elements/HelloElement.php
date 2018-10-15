@@ -25,7 +25,7 @@ class HelloElement extends Element
 
 	public function getString()
 	{
-		$tpl = Template::create('elements/hello.tpl');
+		$tpl = Template::create('elements/index.tpl');
 		$tpl->assign('name', $this->name);
 		$tpl->assign('saying', $this->saying);
 		return $tpl->getString();
