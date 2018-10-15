@@ -3,7 +3,9 @@
 
 {block name=body}
 
-    <h1><i class="fas fa-rocket"></i></h1>
+<div class="container-fluid">
+    <h1><i class="fas fa-wallet"></i> Carteira</h1>
+</div>
 
 {/block}
 
