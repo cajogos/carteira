@@ -4,14 +4,7 @@ use Cajogos\Biscuit\Controller as Controller;
 
 class APIController extends Controller
 {
-	public function __construct()
-	{
-		$this->result = array();
-	}
-
-	public function displayResult()
-	{
-	}
+	private $result = array();
 
 	public static function handleGet($method = null)
 	{
@@ -36,11 +29,11 @@ class APIController extends Controller
 		$this->display_result();
 	}
 
-	private function display_result($success = true)
+	private function display_result($status = 'success')
 	{
 		header('Content-type: application/json');
 		$output = array();
-		$output['success'] = $success;
+		$output['status'] = $status;
 		$output['result'] = $this->result;
 		echo json_encode($output);
 		exit;
