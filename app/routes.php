@@ -12,7 +12,10 @@ $router = new AltoRouter();
  */
 
 // Index page mapping
-$router->map('GET', '/', 'DefaultController::display', 'index');
+$router->map('GET', '/', 'DefaultController::display');
+
+$router->map('GET', '/api/[:method]', 'APIController::handleGet');
+$router->map('POST', '/api/[:method]', 'APIController::handlePost');
 
 /**
  * Function that handles the AltoRouter object - must be present in order for your routes to work
