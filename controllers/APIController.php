@@ -13,6 +13,8 @@ class APIController extends Controller
 		{
 			case APIModule::METHOD_GET_WALLETS:
 				$controller->method_get_wallets();
+			case APIModule::METHOD_GET_WALLET:
+				$controller->method_get_wallet();
 		}
 		$controller->display_error(self::ERROR_INVALID_METHOD);
 	}
@@ -27,6 +29,11 @@ class APIController extends Controller
 	{
 		$this->result = APIModule::getWallets();
 		$this->display_result();
+	}
+
+	private function method_get_wallet()
+	{
+		$id = Request::getGetVariable('id');
 	}
 
 	private function display_result($status = 'success')

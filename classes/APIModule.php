@@ -3,6 +3,7 @@
 class APIModule
 {
 	const METHOD_GET_WALLETS = 'getWallets';
+	const METHOD_GET_WALLET = 'getWallet';
 
 	/**
 	 * @return array
@@ -21,6 +22,14 @@ class APIModule
 			$output['wallets'][] = $cur_wallet;
 		}
 
+		return $output;
+	}
+
+
+	public static function getWallet($id)
+	{
+		$output = array();
+		$wallet = WalletHandler::getByID($id);
 		return $output;
 	}
 }
