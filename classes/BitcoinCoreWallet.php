@@ -2,6 +2,14 @@
 
 class BitcoinCoreWallet extends Wallet
 {
+	const TYPE = 'bitcoin-core';
+
+	private $endpoint = null;
+	public function setEndpoint($endpoint)
+	{
+		$this->endpoint = $endpoint;
+	}
+
 	public function getBalance()
 	{
 		// TODO: Implement getBalance() method.
