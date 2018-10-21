@@ -24,6 +24,9 @@
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"
             integrity="sha256-qlku5J3WO/ehJpgXYoJWC2px3+bZquKChi4oIWrAKoI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/js/Wallet.js"></script>
+    <script type="text/javascript" src="/assets/js/CarteiraUtils.js"></script>
+    <script type="text/javascript" src="/assets/js/BitcoinCoreWallet.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>
     {block name=js}{/block}
 </body>

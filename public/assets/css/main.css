@@ -1,3 +1,16 @@
 html {
     background: #EEE;
 }
+
+.page-container {
+    padding: 40px;
+}
+
+.wallet-card {
+    margin-bottom: 20px;
+}
+
+td.number {
+    font-family: monospace;
+    text-align: right;
+}
