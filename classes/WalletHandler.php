@@ -25,6 +25,20 @@ class WalletHandler
 		return $this->wallets;
 	}
 
+	/**
+	 * @param string $id
+	 * @return Wallet
+	 * @throws WalletHandlerException
+	 */
+	public function getWalletByID($id)
+	{
+		if (isset($this->wallets[$id]))
+		{
+			return $this->wallets[$id];
+		}
+		throw new WalletHandlerException('Invalid wallet ID provided', WalletHandlerException::INVALID_WALLET_ID);
+	}
+
 	private function load_wallets()
 	{
 		$filename = $_SERVER['DOCUMENT_ROOT'] . '/../../config/wallets.json';
@@ -54,5 +68,16 @@ class WalletHandler
 	{
 		$instance = self::get();
 		return $instance->getWallets();
+	}
+
+	/**
+	 * @param string $id
+	 * @return Wallet
+	 * @throws WalletHandlerException
+	 */
+	public static function getByID($id)
+	{
+		$instance = self::get();
+		return $instance->getWalletByID($id);
 	}
 }
